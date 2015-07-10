@@ -13,7 +13,7 @@ def top_menu
   elsif option == "2"
     drinks_menu
   else
-    puts "#{name}, Get out of my Restaurant, if you are not buying anything."
+    puts "#{@name}, Get out of my Restaurant, if you are not buying anything."
     top_menu
   end
 end
@@ -32,7 +32,7 @@ def food_menu
   elsif option == "2"
     puts "Enjoy your fries"
   else
-    puts "#{name}, choose again, fool."
+    puts "#{@name}, choose again, fool."
     top_menu
   end
 end
@@ -51,16 +51,17 @@ def drinks_menu
   elsif option == "2"
     puts "Enjoy your Wine"
   else
-    puts "#{name}, choose again, fool."
+    puts "#{@name}, choose again, fool."
     top_menu
   end
 end
 
 
+
 puts "What is your name?"
-name = gets
-name.strip!
-puts "Hello, " + name
+@name = gets
+@name.strip!
+puts "Hello, " + @name
 puts "Press enter to continue, "
 gets
 system 'cls'
@@ -71,4 +72,9 @@ gets
 system 'cls'
 
 top_menu
+
+puts " #{@name} Thanks for visiting Happy Days Restraunt"
+
+
+
 
